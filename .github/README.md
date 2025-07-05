@@ -43,7 +43,7 @@ Edit the [clients.conf](/build-core/raddb/clients.conf)
 
 ```conf
 client name {
-    ipaddr = 0.0.0.0/0
+    ipaddr = 172.17.0.0/16
     secret = testing123
 }
 ```
