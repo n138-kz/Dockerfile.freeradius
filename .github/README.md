@@ -22,6 +22,32 @@
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)Dockerfile](https://github.com/n138-kz/Dockerfile/)
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)Dockerfile.freeradius](https://github.com/n138-kz/Dockerfile.freeradius/)
 
+## freeradius/freeradius-server
+
+### add user
+
+Edit the [authorize](/build-core/raddb/mods-config/files/authorize)
+
+```conf
+bob	Cleartext-Password := "test"
+```
+
+|name|description|
+|:-|:-|
+|`bob`|test username|
+|`text`|password of test user|
+
+### add client segment
+
+Edit the [authorize](/build-core/raddb/clients.conf)
+
+```conf
+client name {
+    ipaddr = 0.0.0.0/0
+    secret = testing123
+}
+```
+
 ## Github RestAPI
 
 ```http
