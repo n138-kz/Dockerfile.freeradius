@@ -206,12 +206,12 @@ client 192.168.1.1 {
 ```
 
 ```conf
-admin1  Cleartext-Password := "test"
-        Service-Type = NAS-Prompt-User,
-        Cisco-AVPair = "shell:priv-lvl=15"
-user1   Cleartext-Password := "test"
-        Service-Type = NAS-Prompt-User,
-        Cisco-AVPair = "shell:priv-lvl=1"
+admin1    Cleartext-Password := "test"
+          Service-Type = NAS-Prompt-User,
+          Cisco-AVPair = "shell:priv-lvl=15"
+user1     Cleartext-Password := "test"
+          Service-Type = NAS-Prompt-User,
+          Cisco-AVPair = "shell:priv-lvl=1"
 $enab15$  Cleartext-Password := "test"
           Service-Type = NAS-Prompt-User
 ```
