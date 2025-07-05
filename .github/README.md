@@ -21,13 +21,7 @@
 ```http
 GET https://api.github.com/repos/n138-kz/Dockerfile.freeradius
 ```
-
-<details>
-
 [n138-kz/Dockerfile.freeradius](https://api.github.com/repos/n138-kz/Dockerfile.freeradius) (Public repos only)
-  
-</details>
-
 ## Refs
 
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)Dockerfile](https://github.com/n138-kz/Dockerfile/)
