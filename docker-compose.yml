@@ -5,6 +5,8 @@ services:
       dockerfile: ./build-core/Dockerfile
     pull_policy: always
     restart: always
+    environment:
+      - TZ=Asia/Tokyo
     volumes:
       - type: bind
         source: ./
