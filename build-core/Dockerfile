@@ -1,2 +1,2 @@
 FROM freeradius/freeradius-server:latest
-COPY raddb/ /etc/raddb/
+COPY build-core/raddb/ /etc/raddb/
