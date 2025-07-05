@@ -16,16 +16,17 @@
 [![GitHub language count](https://img.shields.io/github/languages/count/n138-kz/Dockerfile.freeradius)](/../../)
 [![GitHub top language](https://img.shields.io/github/languages/top/n138-kz/Dockerfile.freeradius)](/../../)
 
+## Refs
+
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)Dockerfile](https://github.com/n138-kz/Dockerfile/)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)Dockerfile.freeradius](https://github.com/n138-kz/Dockerfile.freeradius/)
+
 ## Github RestAPI
 
 ```http
 GET https://api.github.com/repos/n138-kz/Dockerfile.freeradius
 ```
 [n138-kz/Dockerfile.freeradius](https://api.github.com/repos/n138-kz/Dockerfile.freeradius) (Public repos only)
-## Refs
-
-- [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)Dockerfile](https://github.com/n138-kz/Dockerfile/)
-- [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)Dockerfile.freeradius](https://github.com/n138-kz/Dockerfile.freeradius/)
 
 ## License
 
