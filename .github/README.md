@@ -66,6 +66,29 @@ docker compose build --no-cache
 docker compose up -d
 ```
 
+```sh
+docker compose exec -it freeradius-core radtest bob test 127.0.0.1 0 testing123
+```
+
+|name|description|
+|:-|:-|
+|`bob`|test username|
+|`test`|password of test user|
+|`127.0.0.1`|address of server|
+|`0`|port number of local(0=auto)|
+|`testing123`|pre-shared-key|
+
+```sh
+Usage: radtest [OPTIONS] user passwd radius-server[:port] nas-port-number secret [ppphint] [nasname]
+        -d RADIUS_DIR       Set radius directory
+        -t <type>           Set authentication method
+                            type can be pap, chap, mschap, or eap-md5
+        -P protocol         Select udp (default) or tcp
+        -x                  Enable debug output
+        -4                  Use IPv4 for the NAS address (default)
+        -6                  Use IPv6 for the NAS address
+```
+
 ## Github RestAPI
 
 ```http
