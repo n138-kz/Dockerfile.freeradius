@@ -41,6 +41,7 @@
       - [OK pattern](#ok-pattern)
       - [NG pattern](#ng-pattern)
         - [not enough permission](#not-enough-permission)
+        - [user has not regist](#user-has-not-regist)
   - [Connecting from Cisco Device(Router, Switch, etc...)](#connecting-from-cisco-devicerouter-switch-etc)
     - [radius-server](#radius-server)
     - [cisco-ios](#cisco-ios)
@@ -165,6 +166,24 @@ Sent Access-Request Id 199 from 0.0.0.0:52058 to 127.0.0.1:1812 length 73
         Message-Authenticator = 0x00
         Cleartext-Password = "test"
 (0) No reply from server for ID 199 socket 3
+root@8d0831a60970:/#
+```
+
+##### user has not regist
+file: [authorize](/build-core/raddb/mods-config/files/authorize)
+
+```log
+root@8d0831a60970:/# radtest hoge test 127.0.0.1 0 testing123
+Sent Access-Request Id 134 from 0.0.0.0:40584 to 127.0.0.1:1812 length 76
+        User-Name = "hoge"
+        User-Password = "test"
+        NAS-IP-Address = 172.24.0.2
+        NAS-Port = 0
+        Message-Authenticator = 0x00
+        Cleartext-Password = "test"
+Received Access-Reject Id 134 from 127.0.0.1:1812 to 127.0.0.1:40584 length 38
+        Message-Authenticator = 0xbce7a317d854baa81ed1f406787f0209
+(0) -: Expected Access-Accept got Access-Reject
 root@8d0831a60970:/#
 ```
 
