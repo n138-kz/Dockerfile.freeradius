@@ -107,7 +107,7 @@ Received Access-Accept Id 150 from 127.0.0.1:1812 to 127.0.0.1:36661 length 38
 #### NG pattern
 
 not enough permission.  
-i.e. not include ipaddr([clients.conf](/build-core/raddb/clients.conf))
+i.e. not appropriate in ipaddr([clients.conf](/build-core/raddb/clients.conf))
 
 ```log
 root@8d0831a60970:/# radtest bob test 127.0.0.1 0 testing123
