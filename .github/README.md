@@ -89,6 +89,21 @@ Usage: radtest [OPTIONS] user passwd radius-server[:port] nas-port-number secret
         -6                  Use IPv6 for the NAS address
 ```
 
+#### OK pattern
+
+```log
+root@8d0831a60970:/# radtest bob test 127.0.0.1 0 testing123
+Sent Access-Request Id 150 from 0.0.0.0:36661 to 127.0.0.1:1812 length 73
+        User-Name = "bob"
+        User-Password = "test"
+        NAS-IP-Address = 172.24.0.2
+        NAS-Port = 0
+        Message-Authenticator = 0x00
+        Cleartext-Password = "test"
+Received Access-Accept Id 150 from 127.0.0.1:1812 to 127.0.0.1:36661 length 38
+        Message-Authenticator = 0x4a7750799c95aabc804128b2524dfe13
+```
+
 ## Github RestAPI
 
 ```http
