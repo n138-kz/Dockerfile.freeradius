@@ -59,6 +59,13 @@ client name {
 }
 ```
 
+### Test run
+
+```sh
+docker compose build --no-cache
+docker compose up -d
+```
+
 ## Github RestAPI
 
 ```http
