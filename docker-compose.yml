@@ -11,8 +11,12 @@ services:
         target: /media/
         read_only: true
       - type: bind
-        source: ./log/
+        source: ./log/custom/
         target: /var/log/custom/
+        read_only: false
+      - type: bind
+        source: ./log/freeradius/
+        target: /var/log/freeradius
         read_only: false
     ports:
       - "1812-1813:1812-1813/udp"
