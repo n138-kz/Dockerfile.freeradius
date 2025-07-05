@@ -104,6 +104,38 @@ Received Access-Accept Id 150 from 127.0.0.1:1812 to 127.0.0.1:36661 length 38
         Message-Authenticator = 0x4a7750799c95aabc804128b2524dfe13
 ```
 
+#### NG pattern
+
+not enough permission.  
+i.e. not include ipaddr([clients.conf](/build-core/raddb/clients.conf))
+
+```log
+root@8d0831a60970:/# radtest bob test 127.0.0.1 0 testing123
+Sent Access-Request Id 199 from 0.0.0.0:52058 to 127.0.0.1:1812 length 73
+        User-Name = "bob"
+        User-Password = "test"
+        NAS-IP-Address = 172.24.0.2
+        NAS-Port = 0
+        Message-Authenticator = 0x00
+        Cleartext-Password = "test"
+Sent Access-Request Id 199 from 0.0.0.0:52058 to 127.0.0.1:1812 length 73
+        User-Name = "bob"
+        User-Password = "test"
+        NAS-IP-Address = 172.24.0.2
+        NAS-Port = 0
+        Message-Authenticator = 0x00
+        Cleartext-Password = "test"
+Sent Access-Request Id 199 from 0.0.0.0:52058 to 127.0.0.1:1812 length 73
+        User-Name = "bob"
+        User-Password = "test"
+        NAS-IP-Address = 172.24.0.2
+        NAS-Port = 0
+        Message-Authenticator = 0x00
+        Cleartext-Password = "test"
+(0) No reply from server for ID 199 socket 3
+root@8d0831a60970:/#
+```
+
 ## Github RestAPI
 
 ```http
