@@ -24,7 +24,7 @@
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)FreeRADIUS #RADIUS - Qiita](https://qiita.com/eiuemura/items/3dcad222a9a295359b10)
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)スイッチとFreeRADIUSまとめて構築 #CentOS - Qiita](https://qiita.com/kato__tatsu/items/26393ea7ef50db0462f9)
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://sig9.org)Cisco IOS ルータへの Radius ログイン時、自動的に特権モードにするには - Sig9 Memo v4.0](https://sig9.org/blog/2015/03/08/)
-- [Cisco IOS and Radius :: The FreeRADIUS project - Documentation](https://www.freeradius.org/documentation/freeradius-server/4.0.0/howto/vendors/cisco.html)
+- [![](https://www.google.com/s2/favicons?size=64&domain=www.freeradius.org)Cisco IOS and Radius :: The FreeRADIUS project - Documentation](https://www.freeradius.org/documentation/freeradius-server/4.0.0/howto/vendors/cisco.html)
 
 ## indexes
 - [Dockerfile.freeradius](#dockerfilefreeradius)
