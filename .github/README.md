@@ -39,7 +39,7 @@ bob	Cleartext-Password := "test"
 
 ### add client segment
 
-Edit the [authorize](/build-core/raddb/clients.conf)
+Edit the [clients.conf](/build-core/raddb/clients.conf)
 
 ```conf
 client name {
