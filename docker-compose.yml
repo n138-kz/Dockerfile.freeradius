@@ -1,0 +1,23 @@
+services:
+  freeradius-core:
+    build:
+      context: .
+      dockerfile: ./build-core/Dockerfile
+    pull_policy: build
+    restart: always
+    volumes:
+      - type: bind
+        source: ./
+        target: /media/
+        read_only: true
+      - type: bind
+        source: ./log/
+        target: /var/log/custom/
+        read_only: false
+    ports:
+      - "1812-1813:1812-1813/udp"
+    logging:
+      driver: json-file
+      options:
+        max-size: "1024k"
+        max-file: "10"
