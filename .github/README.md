@@ -40,6 +40,7 @@
     - [Test run](#test-run)
       - [OK pattern](#ok-pattern)
       - [NG pattern](#ng-pattern)
+        - [not enough permission](#not-enough-permission)
   - [Connecting from Cisco Device(Router, Switch, etc...)](#connecting-from-cisco-devicerouter-switch-etc)
     - [radius-server](#radius-server)
     - [cisco-ios](#cisco-ios)
@@ -137,7 +138,7 @@ Received Access-Accept Id 150 from 127.0.0.1:1812 to 127.0.0.1:36661 length 38
 
 #### NG pattern
 
-not enough permission.  
+##### not enough permission
 i.e. ipaddr has not appropriate. file: [clients.conf](/build-core/raddb/clients.conf)
 
 ```log
