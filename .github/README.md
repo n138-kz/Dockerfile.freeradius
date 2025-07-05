@@ -21,8 +21,19 @@
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://hub.docker.com)freeradius/freeradius-server](https://hub.docker.com/r/freeradius/freeradius-server)
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)Dockerfile](https://github.com/n138-kz/Dockerfile/)
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)Dockerfile.freeradius](https://github.com/n138-kz/Dockerfile.freeradius/)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)FreeRADIUS #RADIUS - Qiita](https://qiita.com/eiuemura/items/3dcad222a9a295359b10)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)スイッチとFreeRADIUSまとめて構築 #CentOS - Qiita](https://qiita.com/kato__tatsu/items/26393ea7ef50db0462f9)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://sig9.org)Cisco IOS ルータへの Radius ログイン時、自動的に特権モードにするには - Sig9 Memo v4.0](https://sig9.org/blog/2015/03/08/)
+- [Cisco IOS and Radius :: The FreeRADIUS project - Documentation](https://www.freeradius.org/documentation/freeradius-server/4.0.0/howto/vendors/cisco.html)
 
 ## freeradius/freeradius-server
+
+### Ports
+
+|name|description|
+|:-|:-|
+|1812|認証・認可|
+|1813|アカウンティング|
 
 ### add user
 
@@ -134,6 +145,51 @@ Sent Access-Request Id 199 from 0.0.0.0:52058 to 127.0.0.1:1812 length 73
         Cleartext-Password = "test"
 (0) No reply from server for ID 199 socket 3
 root@8d0831a60970:/#
+```
+
+## Connecting from Cisco Device(Router, Switch, etc...)
+
+### radius-server
+
+|name|description|level|password|
+|:-|:-|:-|:-|
+|`admin1`|administrator user.|15|`test`|
+|`user1`|administrator user.|1|`test`|
+|`$enab15$`|cisco enable password||`test`|
+
+```conf
+client 192.168.1.1 {
+    secret = testing123
+    nastype = cisco
+    shortname = switch
+}
+```
+
+```conf
+admin1	Cleartext-Password := "test"
+        Service-Type = NAS-Prompt-User,
+        Cisco-AVPair = "shell:priv-lvl=15"
+user1   Cleartext-Password := "test"
+        Service-Type = NAS-Prompt-User,
+        Cisco-AVPair = "shell:priv-lvl=1"
+$enab15$  Cleartext-Password := "test"
+          Service-Type = NAS-Prompt-User
+```
+
+### cisco-ios
+
+```cisco
+aaa new-model
+!
+aaa authentication login default group radius local-case
+aaa authentication enable default group radius enable
+aaa authorization exec default group radius if-authenticated
+!
+radius server radius-server
+ address ipv4 10.0.0.1 auth-port 1812 acct-port 1813
+ key testing123
+!
+end
 ```
 
 ## Github RestAPI
