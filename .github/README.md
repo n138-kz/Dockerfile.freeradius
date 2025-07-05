@@ -48,6 +48,17 @@ client name {
 }
 ```
 
+### pre-shared-key
+
+Edit the `secret` in [clients.conf](/build-core/raddb/clients.conf)
+
+```conf
+client name {
+    ipaddr = 172.17.0.0/16
+    secret = testing123
+}
+```
+
 ## Github RestAPI
 
 ```http
