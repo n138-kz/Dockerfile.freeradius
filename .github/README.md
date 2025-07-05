@@ -26,6 +26,25 @@
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://sig9.org)Cisco IOS ルータへの Radius ログイン時、自動的に特権モードにするには - Sig9 Memo v4.0](https://sig9.org/blog/2015/03/08/)
 - [Cisco IOS and Radius :: The FreeRADIUS project - Documentation](https://www.freeradius.org/documentation/freeradius-server/4.0.0/howto/vendors/cisco.html)
 
+## indexes
+- [Dockerfile.freeradius](#dockerfilefreeradius)
+  - [Activity](#activity)
+  - [Refs](#refs)
+  - [indexes](#indexes)
+  - [freeradius/freeradius-server](#freeradiusfreeradius-server)
+    - [Ports](#ports)
+    - [add user](#add-user)
+    - [add client segment](#add-client-segment)
+    - [pre-shared-key](#pre-shared-key)
+    - [Test run](#test-run)
+      - [OK pattern](#ok-pattern)
+      - [NG pattern](#ng-pattern)
+  - [Connecting from Cisco Device(Router, Switch, etc...)](#connecting-from-cisco-devicerouter-switch-etc)
+    - [radius-server](#radius-server)
+    - [cisco-ios](#cisco-ios)
+  - [Github RestAPI](#github-restapi)
+  - [License](#license)
+
 ## freeradius/freeradius-server
 
 ### Ports
