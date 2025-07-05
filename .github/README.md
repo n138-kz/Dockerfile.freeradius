@@ -35,7 +35,7 @@ bob	Cleartext-Password := "test"
 |name|description|
 |:-|:-|
 |`bob`|test username|
-|`text`|password of test user|
+|`test`|password of test user|
 
 ### add client segment
 
