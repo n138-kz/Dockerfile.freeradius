@@ -108,7 +108,7 @@ docker compose exec -it freeradius-core radtest bob test 127.0.0.1 0 testing123
 |`bob`|test username|
 |`test`|password of test user|
 |`127.0.0.1`|address of server|
-|`0`|local port number (0=auto)|
+|`0`|local port number (0=auto?)|
 |`testing123`|pre-shared-key|
 
 ```sh
