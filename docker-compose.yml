@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: ./build-core/Dockerfile
-    pull_policy: build
+    pull_policy: always
     restart: always
     volumes:
       - type: bind
