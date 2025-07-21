@@ -20,6 +20,10 @@ services:
         source: ./log/freeradius/
         target: /var/log/freeradius
         read_only: false
+      - type: volume
+        source: freeradius-etc
+        target: /etc/freeradius
+        read_only: false
     ports:
       - "1812-1813:1812-1813/udp"
     logging:
@@ -27,3 +31,5 @@ services:
       options:
         max-size: "1024k"
         max-file: "10"
+volumes:
+  freeradius-etc:
