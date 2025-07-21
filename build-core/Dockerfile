@@ -9,4 +9,6 @@ RUN sed -i 's/^\tauth = no/\tauth = yes/g' /etc/raddb/radiusd.conf
 RUN sed -i 's/^\tauth_badpass = no/\tauth_badpass = yes/g' /etc/raddb/radiusd.conf
 RUN sed -i 's/^\tauth_goodpass = no/\tauth_goodpass = yes/g' /etc/raddb/radiusd.conf
 RUN sed -i 's/dialect = .*/dialect = "postgresql"/g' /etc/freeradius/mods-available/sql
+RUN sed -i 's/^\tdriver = .*/\tdriver = "rlm_sql_postgresql"/g' /etc/freeradius/mods-available/sql
 RUN cat /etc/freeradius/mods-available/sql | grep 'dialect = '
+RUN cat /etc/freeradius/mods-available/sql | grep 'driver = '
